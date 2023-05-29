@@ -8,13 +8,15 @@ ACL 2023 (long paper, findings)
 ## Requirements
 * Python3.6
 * Pytorch
+* Sacrebleu
+* Mosesdecoder
 
 ## Model Training
 We validate two advanced models, representing iterative and fully NAT respectively:
 * [MaskT](https://github.com/facebookresearch/fairseq) 
 * [GLAT](https://github.com/FLC777/GLAT)
 
-The projects for MaskT and GLAT are avaliable in [here](), while the training scripts for MaskT and GLAT are avaliable in [here](). 
+The projects for MaskT and GLAT are avaliable in [here](), while the training scripts for MaskT and GLAT are avaliable in [here](https://github.com/DeepLearnXMU/Scaling4NAT/tree/main/training%20scripts). 
 
 ## Evaluation
 For fair comparison, we use case-insensitive tokenBLEU to measure the translation quality on WMT16 En-Ro and WMT14 En-De. We use SacreBLEU for the new benchmark WMT20 En-De.
@@ -28,7 +30,7 @@ mosesdecoder/scripts/tokenizer/detokenizer.perl -l en -penn < sys.ordered > sys.
 sacrebleu -t wmt20 -l en-de --detail < sys.detoken >  sys.sacre_bleu
 
 ## Translations
-The translations of different NAT models are listed in [here]().
+The translations of different NAT models are listed in [here](https://github.com/DeepLearnXMU/Scaling4NAT/tree/main/translations).
 
 ## Citation
 ```
