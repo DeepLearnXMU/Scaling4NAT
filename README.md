@@ -7,7 +7,7 @@ ACL 2023 (long paper, findings)
 ```
 ## Requirements
 * Python >= 3.6
-* Pytorch
+* Pytorch >= 1.71
 * Sacrebleu
 * Mosesdecoder
 
