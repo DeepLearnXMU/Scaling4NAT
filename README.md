@@ -76,7 +76,7 @@ ordered=path_to_your_ordered_output
 detoken=path_to_your_detoken_output
 sacrebleu=path_to_your_bleu_file
 
-cat ${log | grep -P "^H" |sort -V |cut -f 3- > ${ordered}
+cat ${log} | grep -P "^H" |sort -V |cut -f 3- > ${ordered}
 mosesdecoder/scripts/tokenizer/detokenizer.perl -l en -penn < ${ordered} > ${detoken}
 sacrebleu -t wmt20 -l en-de --detail < ${detoken} >  ${sacrebleu}
 ```
